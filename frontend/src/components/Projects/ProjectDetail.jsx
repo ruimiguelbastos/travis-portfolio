@@ -1,0 +1,53 @@
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { useParams } from 'react-router-dom'
+import { getImageUrlFromBackend } from '../../utils'
+
+import { Carousel } from 'react-responsive-carousel'
+import { Loading } from '../Loading/Loading'
+
+import styles from './ProjectDetail.module.css'
+
+export const ProjectDetail = () => {
+  const { projectId } = useParams()
+  const url = import.meta.env.VITE_BASE_URI + '/projects/' + projectId
+  const [projectDetail, setData] = useState(null)
+
+  const fetchInfo = async () => {
+    return axios.get(url).then((res) => setData(res.data))
+  }
+
+  useEffect(() => {
+    fetchInfo()
+  })
+
+  if (!projectDetail) {
+    return <Loading />
+  }
+
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.title}>{projectDetail.title}</h1>
+      <Carousel>
+        {projectDetail.images.map((image) => {
+          return (
+            <div>
+              <img src={getImageUrlFromBackend(image.src)} />
+              <p className='legend'>{image.title}</p>
+            </div>
+          )
+        })}
+      </Carousel>
+      <p className={styles.description}>{projectDetail.description}</p>
+      <ul className={styles.tags}>
+        {projectDetail.tags.map((tag) => {
+          return (
+            <li key={tag} className={styles.tag}>
+              {tag}
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+  )
+}

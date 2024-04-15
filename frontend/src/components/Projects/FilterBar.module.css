@@ -1,0 +1,45 @@
+@import "../../vars.css";
+
+.filterBar {
+  font-size: 25px;
+  margin-top: 37px;
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: left;
+  gap: 15px;
+  border-radius: 10px;
+  background: linear-gradient(360deg, #576cbc 0%, #132a53 100%);
+  box-shadow: 0 16px 14px 0 #04152d;
+  padding: 18px 24px;
+}
+
+.title {
+  margin: 10px;
+}
+
+.filters {
+  margin: 10px;
+}
+
+.options {
+  margin: 10px;
+}
+
+.option {
+  display: flex;
+  width: max-content;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.option label {
+  padding-left: 0.4em;
+}
+
+@media screen and (max-width: 830px) {
+  .filterBar {
+    display: none;
+  }
+}

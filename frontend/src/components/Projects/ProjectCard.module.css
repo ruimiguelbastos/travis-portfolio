@@ -1,0 +1,58 @@
+@import "../../vars.css";
+
+.container {
+  flex-direction: column;
+  border-radius: 8px;
+  background: var(--color-text);
+  box-shadow: 0 2px 3px 0 var(--color-secondary);
+  padding: 18px 24px;
+  display: flex;
+  width: 100%;
+}
+
+.title h3{
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.title a {
+  margin: 10px;
+  color: var(--color-secondary);
+  text-align: center;
+  text-decoration: none;
+}
+
+.description {
+  margin-top: 6px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 400;
+  color: var(--color-secondary);
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.tags {
+  width: 100%;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+
+.tag {
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 100px;
+  background: var(--color-primary);
+  padding: 2px 22px;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    display: flex;
+    margin: 0px;
+  }
+}

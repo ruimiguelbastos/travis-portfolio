@@ -1,0 +1,39 @@
+@import "../../vars.css";
+
+.row {
+  display: flex;
+  margin-top: 37px;
+}
+
+.container {
+  margin-top: 76px;
+  color: var(--color-text);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  color: var(--color-title);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-gap: 2%;
+  gap: 20px;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 830px) {
+  .projects {
+    display: flex;
+    margin: 0%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
