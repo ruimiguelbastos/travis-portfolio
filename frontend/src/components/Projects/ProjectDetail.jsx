@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { getImageUrlFromBackend } from '../../utils'
 
 import { Carousel } from 'react-responsive-carousel'
+import { Slider } from '../Slider/Slider'
 import { Loading } from '../Loading/Loading'
 
 import styles from './ProjectDetail.module.css'
@@ -19,7 +20,7 @@ export const ProjectDetail = () => {
 
   useEffect(() => {
     fetchInfo()
-  })
+  }, [])
 
   if (!projectDetail) {
     return <Loading />
@@ -28,16 +29,9 @@ export const ProjectDetail = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{projectDetail.title}</h1>
-      <Carousel>
-        {projectDetail.images.map((image) => {
-          return (
-            <div>
-              <img src={getImageUrlFromBackend(image.src)} />
-              <p className='legend'>{image.title}</p>
-            </div>
-          )
-        })}
-      </Carousel>
+      <div className={styles.imageContainer}>
+        <Slider images={projectDetail.images} />
+      </div>
       <p className={styles.description}>{projectDetail.description}</p>
       <ul className={styles.tags}>
         {projectDetail.tags.map((tag) => {
