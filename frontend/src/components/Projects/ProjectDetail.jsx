@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import { getImageUrlFromBackend } from '../../utils'
 
-import { Carousel } from 'react-responsive-carousel'
 import { Slider } from '../Slider/Slider'
 import { Loading } from '../Loading/Loading'
 
@@ -28,10 +26,11 @@ export const ProjectDetail = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{projectDetail.title}</h1>
       <div className={styles.imageContainer}>
         <Slider images={projectDetail.images} />
       </div>
+
+      <p className={styles.title}>{projectDetail.title}</p>
       <p className={styles.description}>{projectDetail.description}</p>
       <ul className={styles.tags}>
         {projectDetail.tags.map((tag) => {

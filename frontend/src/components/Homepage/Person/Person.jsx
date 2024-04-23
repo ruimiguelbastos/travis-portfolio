@@ -11,7 +11,7 @@ export default function Person({ data: { title, description } }) {
           Contact me!
         </a>
       </div>
-      <img src={getImageUrl('hero/heroImage.png')} alt='Avatar' className={styles.avatarImg} />
+      <img src={getImageUrl('hero/travis5.png')} alt='Avatar' className={styles.avatarImg} />
     </section>
   )
 }

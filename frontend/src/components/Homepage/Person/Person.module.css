@@ -23,12 +23,10 @@
   font-size: 72px;
   font-weight: 900;
   margin-bottom: 33px;
-  font-family: var(--font-roboto);
 }
 
 .description {
   font-size: 30px;
-  font-family: var(--font-roboto);
   margin-bottom: 52px;
 }
 
@@ -44,8 +42,10 @@
 }
 
 .avatarImg {
-  width: 50%;
+  width: 35%;
   z-index: 1;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
 
   animation-name: floating;
   animation-duration: 3s;
