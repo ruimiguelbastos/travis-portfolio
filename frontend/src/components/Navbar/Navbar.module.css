@@ -127,7 +127,7 @@
 		background-color: var(--color-primary);
 		display: block;
 		flex-direction: column;
-    border-radius: .5rem;
+    	border-radius: .5rem;
 	}
 
 	.menuBtn {
@@ -151,12 +151,12 @@
 		background-color: var(--color-primary);
 	}
 
-  .menuItems li {
-    border-width: 0;
-    border-top-width: 1px;
-    border-style: solid;
-    border-color: #e2e8f0;
-  }
+	.menuItems li {
+		border-width: 0;
+		border-top-width: 1px;
+		border-style: solid;
+		border-color: #e2e8f0;
+	}
 
 	.mobileMenuItem {
 		display: flex;

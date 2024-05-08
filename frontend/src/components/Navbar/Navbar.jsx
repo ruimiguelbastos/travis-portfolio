@@ -34,7 +34,7 @@ export const Navbar = () => {
           <a href='/handcraft'>Handcraft</a>
         </li>
         <li>
-          <a href='#contacts'>Contacts</a>
+          <a href='/#contacts'>Contacts</a>
         </li>
       </ul>
     </nav>
